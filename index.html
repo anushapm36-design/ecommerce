@@ -1,13 +1,175 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>anu-cart</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <title>AnuCart</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f3f4f6;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: white;
+      padding: 15px 30px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #2563eb;
+    }
+
+    .search-box input {
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      outline: none;
+    }
+
+    .cart {
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: #2563eb;
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .hero h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    /* Product Grid */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 30px;
+    }
+
+    .card {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: 0.3s;
+      text-align: center;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .card h3 {
+      margin: 10px 0;
+    }
+
+    .price {
+      color: gray;
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      background: #2563eb;
+      color: white;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: #1e40af;
+    }
+
+    /* Footer */
+    footer {
+      background: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+      box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">AnuCart</div>
+    <div class="search-box">
+      <input type="text" placeholder="Search products...">
+    </div>
+    <div class="cart">🛒</div>
+  </div>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>Welcome to AnuCart</h1>
+    <p>Shop the best products at amazing prices</p>
+  </div>
+
+  <!-- Products -->
+  <div class="products">
+
+    <!-- Product Card -->
+    <div class="card">
+      <img src="https://via.placeholder.com/200" alt="product">
+      <h3>Product 1</h3>
+      <p class="price">₹500</p>
+      <button class="btn">Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/200" alt="product">
+      <h3>Product 2</h3>
+      <p class="price">₹800</p>
+      <button class="btn">Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/200" alt="product">
+      <h3>Product 3</h3>
+      <p class="price">₹1200</p>
+      <button class="btn">Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/200" alt="product">
+      <h3>Product 4</h3>
+      <p class="price">₹1500</p>
+      <button class="btn">Add to Cart</button>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 AnuCart. All rights reserved.</p>
+  </footer>
+
+</body>
 </html>
